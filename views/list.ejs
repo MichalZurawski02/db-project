@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Worker List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.min.css">
+    <link href="/css/navbar-top-fixed.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">VinylStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+            <form class="d-flex" action="/login" method="get">
+                <button class="btn btn-outline-success" type="submit">Log out</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row bg-black bg-opacity-50 rounded">
+        <% results[0] && Object.keys(results[0]).forEach( function(key) { %>
+            <div class="col-sm text-white">
+                <%= key %>
+            </div>
+        <% }) %>
+    </div>
+    <% results.forEach( function(my_row) { %>
+        <div class="row">
+            <% Object.keys(my_row).forEach( function(key){ %>
+                <div class="col-sm text-start">
+                    <div><%= my_row[key] %>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    <% }) %>
+</div>
+</body>
+</html>

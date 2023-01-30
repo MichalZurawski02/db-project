@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.min.css">
+    <link href="/css/navbar-top-fixed.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" >VinylStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+            <form class="d-flex" action="/login" method="get">
+                <button class="btn btn-outline-success" type="submit">Log out</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h4 class="my-3">Choose action</h4>
+    <div class="btn-group-vertical" >
+        <a href="/admin/stores/new" class="btn btn-primary rounded-3 my-3">Add store</a>
+        <a href="/admin/users/new" class="btn btn-primary rounded-3 my-3">Add user</a>
+        <a href="/admin/users" class="btn btn-primary rounded-3 my-3">List users</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.min.css">
+    <link href="/css/navbar-top-fixed.css" rel="stylesheet">
+    <link href="/css/pricing.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">VinylStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+            <form class="d-flex" action="/login" method="get">
+                <button class="btn btn-outline-success " type="submit">Log out</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h4 class="my-3">Choose action</h4>
+    <div class="btn-group-vertical" >
+        <a href="/worker" class="btn btn-primary rounded-3 my-3">Worker section</a>
+        <% if(type !== "worker"){ %>
+            <a href="/manager" class="btn btn-primary rounded-3 my-3">Manager section</a>
+        <% } %>
+        <% if(type === "admin"){ %>
+            <a href="/admin" class="btn btn-primary rounded-3 my-3">Admin section</a>
+        <% } %>
+    </div>
+</div>
+
+</body>
+</html>

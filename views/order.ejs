@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create order</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.min.css">
+    <link href="/css/navbar-top-fixed.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" >VinylStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+            <form class="d-flex" action="/login" method="get">
+                <button class="btn btn-outline-success" type="submit">Log out</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<form class="container w-75" action="/worker/orders" method="post">
+    <div class="mb-3">
+        <label for="customer_name" class="form-label">Customer name</label>
+        <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+    </div>
+    <div class="mb-3">
+        <label for="customer_lastname" class="form-label">Customer lastname</label>
+        <input type="text" class="form-control" id="customer_lastname" name="customer_lastname" required>
+    </div>
+    <div class="mb-3">
+        <label for="customer_phone" class="form-label">Customer phone</label>
+        <input type="tel" pattern="[0-9]{9}" class="form-control" id="customer_phone" name="customer_phone" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Customer Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" name="customer_email" required>
+    </div>
+    <div class="mb-3">
+        <label for="albumID" class="form-label">Album ID</label>
+        <input type="number" class="form-control" id="albumID" name="albumID" required>
+    </div>
+    <div class="mb-3">
+        <label for="storeID" class="form-label">Store ID</label>
+        <input type="number" class="form-control" id="storeID" name="storeID" required>
+    </div>
+    <div class="mb-3">
+        <label for="userID" class="form-label">User ID</label>
+        <input type="number" class="form-control" id="userID" name="userID" required>
+    </div>
+    <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+    <button type="submit" class="w-100 btn btn-lg btn-outline-primary">Create</button>
+</form>
+
+
+</body>
+</html>
