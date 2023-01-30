@@ -25,13 +25,13 @@ create table Customers
 create table Artists
 (
     ID      int unsigned auto_increment primary key,
-    name    varchar(50) not null,
+    name    varchar(50) not null unique,
     country varchar(50) not null
 );
 create table Albums
 (
     ID        int unsigned auto_increment primary key,
-    artistID  int unsigned,
+    artistID  int unsigned not null,
     name      varchar(50) not null unique,
     price     float unsigned,
     year      int unsigned,
